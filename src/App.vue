@@ -1,26 +1,33 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <h1>Black Diamond Center</h1>
+  <Container>
+    <Video
+      videoLink="https://drive.google.com/file/d/11RDzwWZYE66PvU90HKqBG2xsGWf88E5a/preview"
+      videoName="Video One"
+    />
+    <Video
+      videoLink="https://drive.google.com/file/d/11RDzwWZYE66PvU90HKqBG2xsGWf88E5a/preview"
+      videoName="Video Two"
+    />
+  </Container>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import Video from "./components/Video.vue";
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+  name: "App",
+  components: { Video },
+};
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+  box-sizing: border-box;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+}
+Container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
 }
 </style>
