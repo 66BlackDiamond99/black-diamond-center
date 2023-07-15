@@ -3,12 +3,10 @@
     <videFrame>
       <iframe
         :src="videoLink"
-        width="640"
+        width="100%"
         height="360"
         allow="fullscreen"
         frameborder="0"
-        scrolling="no"
-        seamless
       >
       </iframe>
       <img src="../assets/logo.png" />
@@ -32,7 +30,7 @@ container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 650px;
+  width: 95vw;
   padding: 16px;
 }
 videFrame {
@@ -40,7 +38,9 @@ videFrame {
   flex-direction: column;
   align-items: center;
   position: relative;
-  width: 640px;
+  width: 100%;
+  max-width: max-content;
+  aspect-ratio: 14/9;
   border-radius: 16px;
   background-color: #212121;
   color: white;
@@ -50,10 +50,10 @@ videFrame {
 }
 img {
   position: absolute;
-  width: 64px;
-  height: 64px;
+  width: 58px;
+  height: 58px;
   position: absolute;
-  right: 0px;
-  top: 0px;
+  right: 1px;
+  top: 1px;
 }
 </style>
